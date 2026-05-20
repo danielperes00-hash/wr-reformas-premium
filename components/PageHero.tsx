@@ -19,11 +19,11 @@ export default function PageHero({
   titleAccent,
   subtitle,
   imageSrc,
-  imageAlt = "WR Reformas",
+  imageAlt = "4WM Reformas",
   imagePosition = "center",
 }: Props) {
   return (
-    <section className="relative pt-44 pb-28 overflow-hidden bg-obsidian min-h-[520px] flex items-end">
+    <section className="relative pt-28 md:pt-44 pb-14 md:pb-28 overflow-hidden bg-obsidian min-h-[380px] md:min-h-[520px] flex items-end">
       {/* Background */}
       {imageSrc ? (
         <>
@@ -92,11 +92,11 @@ export default function PageHero({
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        className="absolute left-8 md:left-16 top-1/3 h-20 w-px origin-top z-20"
+        className="hidden sm:block absolute left-8 md:left-16 top-1/3 h-20 w-px origin-top z-20"
         style={{ background: "linear-gradient(180deg, #c9a96e, transparent)" }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,12 +108,12 @@ export default function PageHero({
               {eyebrow}
             </span>
           </div>
-          <h1 className="font-display text-5xl md:text-7xl font-light text-cream mb-5 leading-tight">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-light text-cream mb-4 md:mb-5 leading-tight">
             {title}
             <br />
             <span className="italic text-gold">{titleAccent}</span>
           </h1>
-          <p className="text-silver/80 text-lg font-light max-w-2xl leading-relaxed">
+          <p className="text-silver/80 text-sm md:text-lg font-light max-w-2xl leading-relaxed">
             {subtitle}
           </p>
         </motion.div>

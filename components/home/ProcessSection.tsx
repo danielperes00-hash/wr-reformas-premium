@@ -37,7 +37,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-28 bg-graphite relative overflow-hidden">
+    <section className="py-16 md:py-28 bg-graphite relative overflow-hidden">
       {/* Background accent */}
       <div
         className="absolute right-0 top-0 bottom-0 w-1/3 opacity-5"
@@ -46,8 +46,8 @@ export default function ProcessSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -62,7 +62,7 @@ export default function ProcessSection() {
                 Metodologia
               </span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-6">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream mb-6">
               Como
               <br />
               <span className="italic text-gold">Trabalhamos</span>

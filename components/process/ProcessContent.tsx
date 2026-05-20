@@ -108,7 +108,7 @@ const faqs = [
     a: "Em até 48 horas após a visita técnica, você recebe o orçamento completo com memorial descritivo, cronograma e condições de pagamento.",
   },
   {
-    q: "A WR Reformas usa profissionais próprios ou terceirizados?",
+    q: "A 4WM Reformas usa profissionais próprios ou terceirizados?",
     a: "Utilizamos equipe própria treinada e certificada para todos os serviços. Isso garante qualidade, responsabilidade e rastreabilidade do trabalho.",
   },
   {
@@ -129,7 +129,7 @@ export default function ProcessContent() {
   return (
     <div className="bg-obsidian">
       {/* Timeline */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
         <div className="space-y-6">
           {steps.map((step, i) => (
             <motion.div
@@ -142,7 +142,7 @@ export default function ProcessContent() {
             >
               {/* Visual */}
               <div
-                className={`relative flex items-center justify-center p-12 min-h-[200px] ${i % 2 === 1 ? "lg:order-last" : ""}`}
+                className={`relative flex items-center justify-center p-8 md:p-12 min-h-[160px] md:min-h-[200px] ${i % 2 === 1 ? "lg:order-last" : ""}`}
                 style={{ background: step.bg }}
               >
                 <div
@@ -163,7 +163,7 @@ export default function ProcessContent() {
               </div>
 
               {/* Content */}
-              <div className="bg-graphite p-10">
+              <div className="bg-graphite p-6 md:p-10">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="font-display text-sm text-gold/50">{step.number}</span>
                   <div className="h-px flex-1 bg-gold/10" />
@@ -198,8 +198,8 @@ export default function ProcessContent() {
       </div>
 
       {/* FAQ */}
-      <section className="bg-graphite py-20 border-t border-gold/10">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="bg-graphite py-14 md:py-20 border-t border-gold/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -241,8 +241,8 @@ export default function ProcessContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-obsidian">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-14 md:py-20 bg-obsidian">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

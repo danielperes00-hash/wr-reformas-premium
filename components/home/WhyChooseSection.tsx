@@ -37,7 +37,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-28 bg-obsidian relative overflow-hidden">
+    <section className="py-16 md:py-28 bg-obsidian relative overflow-hidden">
       {/* Background text watermark */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -47,13 +47,13 @@ export default function WhyChooseSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="h-px w-10 bg-gold opacity-60" />
@@ -62,9 +62,9 @@ export default function WhyChooseSection() {
             </span>
             <div className="h-px w-10 bg-gold opacity-60" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-5">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream mb-5">
             Por que escolher a{" "}
-            <span className="italic text-gold">WR Reformas?</span>
+            <span className="italic text-gold">4WM Reformas?</span>
           </h2>
           <p className="text-silver max-w-xl mx-auto font-light leading-relaxed">
             Mais do que uma empresa de reformas — somos parceiros na transformação
@@ -80,7 +80,7 @@ export default function WhyChooseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: (i % 3) * 0.1 }}
-              className="bg-graphite p-10 group hover:bg-graphite-mid transition-colors duration-300"
+              className="bg-graphite p-6 md:p-10 group hover:bg-graphite-mid transition-colors duration-300"
             >
               <div className="text-gold mb-5 group-hover:scale-110 transition-transform duration-300 w-fit">
                 {reason.icon}

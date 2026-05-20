@@ -29,6 +29,11 @@ export default function Navigation() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <>
       <motion.header
@@ -41,14 +46,14 @@ export default function Navigation() {
             : "bg-transparent py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none group">
             <span className="font-display text-2xl font-semibold tracking-widest text-cream group-hover:text-gold transition-colors duration-300">
-              WR
+              4WM
             </span>
             <span className="text-[9px] tracking-[0.35em] text-gold uppercase font-light">
-              Reformas & Soluções
+              Reformas
             </span>
           </Link>
 
@@ -112,7 +117,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-obsidian/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-obsidian/98 backdrop-blur-xl flex flex-col items-center justify-center gap-5 sm:gap-8"
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -123,7 +128,7 @@ export default function Navigation() {
               >
                 <Link
                   href={link.href}
-                  className={`font-display text-4xl font-light tracking-wide transition-colors duration-300 ${
+                  className={`font-display text-3xl sm:text-4xl font-light tracking-wide transition-colors duration-300 ${
                     pathname === link.href ? "text-gold" : "text-cream hover:text-gold"
                   }`}
                 >

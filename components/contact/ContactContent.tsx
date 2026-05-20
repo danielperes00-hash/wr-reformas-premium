@@ -52,9 +52,9 @@ export default function ContactContent() {
   };
 
   return (
-    <div className="bg-obsidian py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-5 gap-16">
+    <div className="bg-obsidian py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-5 gap-8 md:gap-16">
           {/* Left: info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -96,7 +96,7 @@ export default function ContactContent() {
             </div>
 
             {/* Business hours */}
-            <div className="mt-12 p-8 border border-gold/10 bg-graphite">
+            <div className="mt-8 md:mt-12 p-6 md:p-8 border border-gold/10 bg-graphite">
               <div className="text-[10px] tracking-[0.3em] text-gold uppercase mb-5">Horário de Funcionamento</div>
               <div className="space-y-3">
                 {[
@@ -146,7 +146,7 @@ export default function ContactContent() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-3"
           >
-            <div className="border border-gold/10 bg-graphite p-10 rounded-xl">
+            <div className="border border-gold/10 bg-graphite p-6 md:p-10 rounded-xl">
               {submitted ? (
                 <div className="text-center py-16">
                   <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-6">

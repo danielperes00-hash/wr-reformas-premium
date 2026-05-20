@@ -43,7 +43,7 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
 
 export default function StatsBar() {
   return (
-    <section className="bg-graphite-mid border-y border-gold/10 py-12 overflow-hidden">
+    <section className="bg-graphite-mid border-y border-gold/10 py-10 md:py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-gold/10">
           {stats.map((stat, i) => (
@@ -55,7 +55,7 @@ export default function StatsBar() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="text-center lg:px-10"
             >
-              <div className="font-display text-5xl font-semibold text-gold-shimmer mb-2">
+              <div className="font-display text-4xl md:text-5xl font-semibold text-gold-shimmer mb-2">
                 <CountUp value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="text-silver text-xs tracking-[0.15em] uppercase font-light">

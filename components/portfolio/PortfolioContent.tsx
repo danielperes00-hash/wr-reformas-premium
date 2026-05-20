@@ -117,8 +117,8 @@ export default function PortfolioContent() {
   );
 
   return (
-    <div className="bg-obsidian py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="bg-obsidian py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Filter */}
         <div className="flex flex-wrap gap-2 mb-12 justify-center">
           {categories.map((cat) => (

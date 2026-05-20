@@ -42,9 +42,9 @@ export default function AboutContent() {
   return (
     <div className="bg-obsidian">
       {/* Story Section */}
-      <section className="py-24 border-b border-gold/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="py-14 md:py-24 border-b border-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -61,7 +61,7 @@ export default function AboutContent() {
               </h2>
               <div className="space-y-5 text-silver font-light leading-relaxed">
                 <p>
-                  Fundada em 2009 por Wagner Rodrigues, a WR Reformas & Soluções nasceu de
+                  Fundada em 2009 por Wagner Rodrigues, a 4WM Reformas nasceu de
                   uma convicção simples: o mercado precisava de uma empresa que unisse
                   técnica impecável com atendimento de luxo.
                 </p>
@@ -89,7 +89,7 @@ export default function AboutContent() {
               <div className="rounded-xl overflow-hidden border border-gold/10 relative" style={{ height: "480px" }}>
                 <Image
                   src="/images/about-staircase.jpg"
-                  alt="Escadaria moderna com mármore — elegância e qualidade WR Reformas"
+                  alt="Escadaria moderna com mármore — elegância e qualidade 4WM Reformas"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -98,7 +98,7 @@ export default function AboutContent() {
               </div>
 
               {/* Floating stat */}
-              <div className="absolute -bottom-5 -left-5 bg-graphite border border-gold/20 p-6 rounded-lg">
+              <div className="absolute -bottom-4 left-4 bg-graphite border border-gold/20 p-4 md:p-6 rounded-lg">
                 <div className="font-display text-4xl font-semibold text-gold mb-1">800+</div>
                 <div className="text-silver text-xs tracking-[0.15em] uppercase font-light">Obras Realizadas</div>
               </div>
@@ -108,14 +108,14 @@ export default function AboutContent() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-graphite border-b border-gold/10">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-14 md:py-24 bg-graphite border-b border-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="h-px w-10 bg-gold opacity-60" />
@@ -135,7 +135,7 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-graphite p-10 text-center"
+                className="bg-graphite p-6 md:p-10 text-center"
               >
                 <div className="font-display text-5xl font-light text-gold/20 mb-4">
                   {String(i + 1).padStart(2, "0")}
@@ -149,14 +149,14 @@ export default function AboutContent() {
       </section>
 
       {/* Team */}
-      <section className="py-24 bg-obsidian border-b border-gold/10">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-14 md:py-24 bg-obsidian border-b border-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="h-px w-10 bg-gold opacity-60" />
@@ -207,8 +207,8 @@ export default function AboutContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-graphite">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-14 md:py-20 bg-graphite">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +222,7 @@ export default function AboutContent() {
             <p className="text-silver font-light mb-8">
               Agende uma visita técnica gratuita com nossa equipe.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 href="https://wa.me/5521982162480"
                 target="_blank"

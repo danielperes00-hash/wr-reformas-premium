@@ -93,7 +93,7 @@ const services = [
 export default function ServicesContent() {
   return (
     <div className="bg-obsidian">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20">
         <div className="space-y-px bg-gold/5">
           {services.map((service, i) => (
             <motion.div
@@ -125,7 +125,7 @@ export default function ServicesContent() {
                 </div>
 
                 {/* Content */}
-                <div className="lg:col-span-4 p-8 md:p-10 grid md:grid-cols-2 gap-8">
+                <div className="lg:col-span-4 p-5 sm:p-8 md:p-10 grid md:grid-cols-2 gap-6 md:gap-8">
                   <div>
                     <div className="text-[10px] tracking-[0.3em] text-gold/60 uppercase mb-2">
                       Serviço {service.number}

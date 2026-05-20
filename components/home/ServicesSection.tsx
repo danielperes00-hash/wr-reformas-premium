@@ -68,7 +68,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-28 bg-obsidian">
+    <section className="py-16 md:py-28 bg-obsidian">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -76,7 +76,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="h-px w-10 bg-gold opacity-60" />
@@ -85,7 +85,7 @@ export default function ServicesSection() {
             </span>
             <div className="h-px w-10 bg-gold opacity-60" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-5">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream mb-5">
             Nossos <span className="italic text-gold">Serviços</span>
           </h2>
           <p className="text-silver max-w-xl mx-auto font-light leading-relaxed">
@@ -103,7 +103,7 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.07 }}
-              className="service-card bg-graphite p-8 group cursor-pointer"
+              className="service-card bg-graphite p-6 md:p-8 group cursor-pointer"
             >
               <div className="text-gold mb-5 group-hover:scale-110 transition-transform duration-300 w-fit">
                 {service.icon}

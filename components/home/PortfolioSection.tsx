@@ -69,14 +69,14 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section className="py-28 bg-obsidian">
+    <section className="py-16 md:py-28 bg-obsidian">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-4 md:gap-6"
         >
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -85,7 +85,7 @@ export default function PortfolioSection() {
                 Projetos Realizados
               </span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl font-light text-cream">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream">
               Nosso <span className="italic text-gold">Portfólio</span>
             </h2>
           </div>
@@ -109,7 +109,7 @@ export default function PortfolioSection() {
               className={`portfolio-card relative rounded-lg overflow-hidden border border-gold/5 hover:border-gold/20 transition-colors duration-500 group ${
                 project.size === "lg" ? "md:row-span-2" : ""
               }`}
-              style={{ minHeight: project.size === "lg" ? "500px" : "260px" }}
+              style={{ minHeight: project.size === "lg" ? "clamp(260px, 40vw, 500px)" : "clamp(220px, 30vw, 260px)" }}
             >
               {/* Real image */}
               <Image

@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden"
+      className="relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Background photo with parallax */}
       <motion.div style={{ y }} className="absolute inset-0 z-0 scale-110">
@@ -50,20 +50,20 @@ export default function HeroSection() {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-        className="absolute left-8 md:left-16 top-1/4 bottom-1/4 w-px origin-top"
+        className="hidden sm:block absolute left-8 md:left-16 top-1/4 bottom-1/4 w-px origin-top"
         style={{ background: "linear-gradient(180deg, transparent, #c9a96e, transparent)" }}
       />
 
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center justify-center gap-3 mb-8"
+          className="flex items-center justify-center gap-3 mb-5 sm:mb-8"
         >
           <div className="h-px w-12 bg-gold opacity-60" />
           <span className="text-gold text-xs tracking-[0.4em] uppercase font-light">
@@ -77,7 +77,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="font-display font-light leading-[1.05] mb-6"
-          style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
+          style={{ fontSize: "clamp(2.5rem, 9vw, 7rem)" }}
         >
           <span className="text-cream">Transformamos</span>
           <br />
@@ -91,7 +91,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="text-silver font-light text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-silver font-light text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed"
         >
           Há mais de 15 anos entregando reformas residenciais e corporativas com
           precisão, qualidade e respeito ao prazo.
@@ -101,18 +101,18 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.0 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto"
         >
           <Link
             href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20gratuito"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold inline-flex items-center gap-3"
+            className="btn-gold inline-flex items-center gap-3 w-full sm:w-auto justify-center"
           >
             <WhatsAppIcon />
             Solicitar Orçamento Grátis
           </Link>
-          <Link href="/portfolio" className="btn-outline inline-flex items-center gap-2">
+          <Link href="/portfolio" className="btn-outline inline-flex items-center gap-2 w-full sm:w-auto justify-center">
             Ver Portfólio
             <ArrowIcon />
           </Link>

@@ -21,13 +21,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "WR Reformas & Soluções | Reformas Residenciais e Corporativas Premium",
+  title: "4WM Reformas | Reformas Residenciais e Corporativas Premium",
   description:
     "Transformamos espaços com excelência e sofisticação. Especialistas em reformas residenciais e corporativas em São Paulo. Solicite seu orçamento.",
   keywords:
     "reforma residencial, reforma corporativa, reforma banheiro, reforma cozinha, pintura, drywall, piso, revestimento, impermeabilização, alvenaria, elétrica, hidráulica",
   openGraph: {
-    title: "WR Reformas & Soluções",
+    title: "4WM Reformas",
     description: "Transformamos espaços com excelência e sofisticação.",
     type: "website",
     locale: "pt_BR",

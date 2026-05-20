@@ -136,14 +136,14 @@ export default function BeforeAfterSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-28 bg-graphite">
+    <section className="py-16 md:py-28 bg-graphite">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="h-px w-10 bg-gold opacity-60" />
@@ -152,7 +152,7 @@ export default function BeforeAfterSection() {
             </span>
             <div className="h-px w-10 bg-gold opacity-60" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream mb-5">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream mb-5">
             Antes <span className="italic text-gold">&amp;</span> Depois
           </h2>
           <p className="text-silver max-w-xl mx-auto font-light leading-relaxed">
@@ -161,12 +161,12 @@ export default function BeforeAfterSection() {
         </motion.div>
 
         {/* Project tabs */}
-        <div className="flex gap-1 mb-8 bg-graphite-mid p-1 rounded-lg w-fit mx-auto">
+        <div className="flex gap-1 mb-6 md:mb-8 bg-graphite-mid p-1 rounded-lg overflow-x-auto max-w-full mx-auto w-fit">
           {projects.map((p, i) => (
             <button
               key={p.title}
               onClick={() => setActive(i)}
-              className={`px-5 py-2.5 text-xs tracking-[0.15em] uppercase font-medium transition-all duration-300 rounded-md ${
+              className={`px-3 sm:px-5 py-2.5 text-xs tracking-[0.1em] sm:tracking-[0.15em] uppercase font-medium transition-all duration-300 rounded-md whitespace-nowrap ${
                 active === i ? "bg-gold text-obsidian" : "text-silver hover:text-cream"
               }`}
             >
@@ -189,7 +189,7 @@ export default function BeforeAfterSection() {
             beforeLabel={projects[active].beforeLabel}
             afterLabel={projects[active].afterLabel}
           />
-          <div className="bg-graphite-mid px-8 py-5 flex flex-wrap gap-6 items-center">
+          <div className="bg-graphite-mid px-4 sm:px-8 py-4 sm:py-5 flex flex-wrap gap-4 sm:gap-6 items-center">
             <div>
               <div className="text-[10px] tracking-[0.2em] text-gold/60 uppercase mb-1">Projeto</div>
               <div className="text-cream font-display text-lg font-medium">{projects[active].title}</div>

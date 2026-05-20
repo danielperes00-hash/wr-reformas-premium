@@ -23,14 +23,14 @@ const links = [
 export default function Footer() {
   return (
     <footer className="bg-graphite border-t border-gold/10">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <div className="font-display text-3xl font-semibold tracking-widest text-cream">WR</div>
+              <div className="font-display text-3xl font-semibold tracking-widest text-cream">4WM</div>
               <div className="text-[9px] tracking-[0.35em] text-gold uppercase font-light">
-                Reformas & Soluções
+                Reformas
               </div>
             </div>
             <p className="text-silver text-sm leading-relaxed mb-6 font-light">
@@ -132,7 +132,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gold/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-stone text-xs tracking-wide font-light">
-            © {new Date().getFullYear()} WR Reformas & Soluções. Todos os direitos reservados.
+            © {new Date().getFullYear()} 4WM Reformas. Todos os direitos reservados.
           </p>
           <p className="text-stone text-xs tracking-wide font-light">
             CNPJ: 00.000.000/0001-00

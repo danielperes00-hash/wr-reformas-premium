@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: "Fernanda Oliveira",
     role: "Proprietária — Cobertura Higienópolis",
-    text: "A WR Reformas superou todas as expectativas. O projeto foi executado com um nível de cuidado e precisão que eu nunca tinha visto. Entregaram antes do prazo e dentro do orçamento. Recomendo com toda convicção.",
+    text: "A 4WM Reformas superou todas as expectativas. O projeto foi executado com um nível de cuidado e precisão que eu nunca tinha visto. Entregaram antes do prazo e dentro do orçamento. Recomendo com toda convicção.",
     rating: 5,
   },
   {
     name: "Ricardo Mendes",
     role: "CEO — Grupo Mendes Incorporações",
-    text: "Contratamos a WR para a reforma de nosso escritório na Faria Lima. Trabalho impecável, equipe altamente profissional e comunicação excelente durante todo o processo. O resultado ficou digno de revista de arquitetura.",
+    text: "Contratamos a 4WM Reformas para a reforma de nosso escritório na Faria Lima. Trabalho impecável, equipe altamente profissional e comunicação excelente durante todo o processo. O resultado ficou digno de revista de arquitetura.",
     rating: 5,
   },
   {
     name: "Camila Ferreira",
     role: "Arquiteta de Interiores",
-    text: "Como arquiteta, sou extremamente exigente com a execução. A WR Reformas é a única empresa que indico para meus clientes premium. Eles entendem detalhes técnicos, respeitam o projeto e têm acabamento de alto padrão.",
+    text: "Como arquiteta, sou extremamente exigente com a execução. A 4WM Reformas é a única empresa que indico para meus clientes premium. Eles entendem detalhes técnicos, respeitam o projeto e têm acabamento de alto padrão.",
     rating: 5,
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: "Ana Lima",
     role: "Proprietária — Casa Morumbi",
-    text: "Reforma de 450m² da nossa casa, um projeto desafiador. A WR gerenciou tudo com maestria: 8 tipos de serviços simultaneamente, materiais importados, prazo respeitado. Simplesmente excelente.",
+    text: "Reforma de 450m² da nossa casa, um projeto desafiador. A 4WM Reformas gerenciou tudo com maestria: 8 tipos de serviços simultaneamente, materiais importados, prazo respeitado. Simplesmente excelente.",
     rating: 5,
   },
 ];
@@ -43,14 +43,14 @@ export default function TestimonialsSection() {
   const next = () => setActive((a) => (a + 1) % testimonials.length);
 
   return (
-    <section className="py-28 bg-graphite overflow-hidden">
+    <section className="py-16 md:py-28 bg-graphite overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="h-px w-10 bg-gold opacity-60" />
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
             </span>
             <div className="h-px w-10 bg-gold opacity-60" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-cream">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-cream">
             O que dizem sobre{" "}
             <span className="italic text-gold">nós</span>
           </h2>
@@ -75,14 +75,14 @@ export default function TestimonialsSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4 }}
-                className="testimonial-card rounded-xl p-10 h-full flex flex-col"
+                className="testimonial-card rounded-xl p-6 md:p-10 h-full flex flex-col"
               >
                 {/* Quote mark */}
                 <div className="font-display text-8xl text-gold/15 leading-none mb-6 -mt-4 select-none">
                   &ldquo;
                 </div>
 
-                <p className="font-display text-2xl md:text-3xl text-cream font-light leading-relaxed italic mb-10 flex-1">
+                <p className="font-display text-xl md:text-2xl lg:text-3xl text-cream font-light leading-relaxed italic mb-8 md:mb-10 flex-1">
                   {testimonials[active].text}
                 </p>
 
