@@ -47,7 +47,7 @@ export default function ContactContent() {
       `*Área aprox.:* ${form.area}\n` +
       `*Mensagem:* ${form.message}`
     );
-    window.open(`https://wa.me/5521982162480?text=${msg}`, "_blank");
+    window.open(`https://wa.me/5521960104648?text=${msg}`, "_blank");
     setSubmitted(true);
   };
 
@@ -69,22 +69,22 @@ export default function ContactContent() {
                 icon={<WhatsAppIcon />}
                 title="WhatsApp"
                 label="Resposta imediata"
-                value="(21) 98216-2480"
-                href="https://wa.me/5521982162480"
+                value="(21) 96010-4648"
+                href="https://wa.me/5521960104648"
               />
               <ContactCard
                 icon={<PhoneIcon />}
                 title="Telefone"
                 label="Seg–Sex, 8h às 18h"
-                value="(21) 98216-2480"
-                href="tel:+5521982162480"
+                value="(21) 96010-4648"
+                href="tel:+5521960104648"
               />
               <ContactCard
                 icon={<EmailIcon />}
                 title="E-mail"
                 label="Resposta em até 2h úteis"
-                value="contato@wrreformas.com.br"
-                href="mailto:contato@wrreformas.com.br"
+                value="daniel@wrsolucoesemreforma.com.br"
+                href="mailto:daniel@wrsolucoesemreforma.com.br"
               />
               <ContactCard
                 icon={<LocationIcon />}
@@ -198,7 +198,7 @@ export default function ContactContent() {
                           value={form.phone}
                           onChange={handleChange}
                           required
-                          placeholder="(21) 98216-2480"
+                          placeholder="(21) 96010-4648"
                           className="form-input"
                         />
                       </FormField>

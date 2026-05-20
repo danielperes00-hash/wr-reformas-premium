@@ -56,8 +56,8 @@ export default function RootLayout({
               description:
                 "Empresa especializada em reformas residenciais e corporativas de alto padrão no Rio de Janeiro e Niterói.",
               url: "https://4wmreformas.com.br",
-              telephone: "+55-21-98216-2480",
-              email: "contato@4wmreformas.com.br",
+              telephone: "+55-21-96010-4648",
+              email: "daniel@wrsolucoesemreforma.com.br",
               areaServed: [
                 { "@type": "City", name: "Rio de Janeiro" },
                 { "@type": "City", name: "Niterói" },

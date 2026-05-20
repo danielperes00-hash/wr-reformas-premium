@@ -54,7 +54,7 @@ export default function ContactCTA() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 md:mb-12 w-full sm:w-auto"
           >
             <Link
-              href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica%20gratuita"
+              href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica%20gratuita"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-3 text-sm w-full sm:w-auto justify-center"

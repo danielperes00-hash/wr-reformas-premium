@@ -104,7 +104,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto"
         >
           <Link
-            href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20gratuito"
+            href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20gratuito"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold inline-flex items-center gap-3 w-full sm:w-auto justify-center"

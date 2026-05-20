@@ -223,7 +223,7 @@ export default function PortfolioContent() {
             Quer ver o seu projeto aqui?
           </p>
           <Link
-            href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20meu%20projeto"
+            href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20meu%20projeto"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold inline-flex items-center gap-2"

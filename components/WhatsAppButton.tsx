@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50"
     >
       <Link
-        href="https://wa.me/5521982162480?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento"
+        href="https://wa.me/5521960104648?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"

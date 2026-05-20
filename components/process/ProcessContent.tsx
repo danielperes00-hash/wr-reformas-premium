@@ -258,7 +258,7 @@ export default function ProcessContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica%20gratuita"
+                href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica%20gratuita"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold inline-flex items-center justify-center gap-2"

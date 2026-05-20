@@ -45,7 +45,7 @@ export default function Footer() {
                 <FacebookIcon />
               </SocialLink>
               <SocialLink
-                href="https://wa.me/5521982162480"
+                href="https://wa.me/5521960104648"
                 label="WhatsApp"
               >
                 <WhatsAppIcon />
@@ -99,20 +99,20 @@ export default function Footer() {
             <div className="space-y-4">
               <ContactItem label="WhatsApp">
                 <Link
-                  href="https://wa.me/5521982162480"
+                  href="https://wa.me/5521960104648"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-silver text-sm hover:text-gold transition-colors font-light"
                 >
-                  (21) 98216-2480
+                  (21) 96010-4648
                 </Link>
               </ContactItem>
               <ContactItem label="E-mail">
                 <Link
-                  href="mailto:contato@wrreformas.com.br"
+                  href="mailto:daniel@wrsolucoesemreforma.com.br"
                   className="text-silver text-sm hover:text-gold transition-colors font-light"
                 >
-                  contato@wrreformas.com.br
+                  daniel@wrsolucoesemreforma.com.br
                 </Link>
               </ContactItem>
               <ContactItem label="Endereço">

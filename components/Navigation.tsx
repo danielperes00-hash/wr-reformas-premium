@@ -80,7 +80,7 @@ export default function Navigation() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
+              href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-2"
@@ -143,7 +143,7 @@ export default function Navigation() {
               className="mt-4"
             >
               <Link
-                href="https://wa.me/5521982162480?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
+                href="https://wa.me/5521960104648?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold inline-flex items-center gap-2"

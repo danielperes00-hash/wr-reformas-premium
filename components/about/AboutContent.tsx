@@ -223,7 +223,7 @@ export default function AboutContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
-                href="https://wa.me/5521982162480"
+                href="https://wa.me/5521960104648"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold inline-flex items-center justify-center gap-2"
