@@ -67,8 +67,8 @@ export default function WhyChooseSection() {
             <span className="italic text-gold">4WM Reformas?</span>
           </h2>
           <p className="text-silver max-w-xl mx-auto font-light leading-relaxed">
-            Mais do que uma empresa de reformas — somos parceiros na transformação
-            do seu espaço com padrão premium e confiança garantida.
+            A referência em reformas de alto padrão no Rio de Janeiro e Niterói.
+            Somos parceiros na transformação do seu espaço com confiança garantida.
           </p>
         </motion.div>
 

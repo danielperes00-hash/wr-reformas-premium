@@ -121,7 +121,7 @@ const faqs = [
   },
   {
     q: "Vocês fazem obras em apartamentos de condomínio?",
-    a: "Sim. Nossa equipe conhece as normas condominiais, horários permitidos e requisitos de ART. Auxiliamos na documentação junto ao síndico.",
+    a: "Sim. Atendemos condomínios em todo o Rio de Janeiro e Niterói. Nossa equipe conhece as normas condominiais, horários permitidos e requisitos de ART. Auxiliamos na documentação junto ao síndico.",
   },
 ];
 

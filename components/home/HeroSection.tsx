@@ -93,8 +93,8 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.8 }}
           className="text-silver font-light text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed"
         >
-          Há mais de 15 anos entregando reformas residenciais e corporativas com
-          precisão, qualidade e respeito ao prazo.
+          Reformas residenciais e corporativas de alto padrão no Rio de Janeiro
+          e Niterói — há mais de 15 anos com precisão, qualidade e respeito ao prazo.
         </motion.p>
 
         <motion.div

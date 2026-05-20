@@ -89,8 +89,8 @@ export default function ServicesSection() {
             Nossos <span className="italic text-gold">Serviços</span>
           </h2>
           <p className="text-silver max-w-xl mx-auto font-light leading-relaxed">
-            Cobertura completa para toda necessidade da sua obra, do planejamento
-            à entrega com garantia.
+            Cobertura completa para toda necessidade da sua obra no Rio de Janeiro
+            e Niterói — do planejamento à entrega com garantia técnica.
           </p>
         </motion.div>
 

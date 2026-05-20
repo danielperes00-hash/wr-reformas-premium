@@ -3,8 +3,8 @@ import PageHero from "@/components/PageHero";
 import ProcessContent from "@/components/process/ProcessContent";
 
 export const metadata: Metadata = {
-  title: "Nosso Processo | 4WM Reformas",
-  description: "Entenda como a 4WM Reformas trabalha: 6 etapas estruturadas para garantir qualidade, prazo e transparência em cada obra.",
+  title: "Como Trabalhamos | 4WM Reformas — Rio de Janeiro e Niterói",
+  description: "Entenda o processo da 4WM Reformas: 6 etapas estruturadas para garantir qualidade, prazo e transparência em cada reforma no Rio de Janeiro e Niterói.",
 };
 
 export default function ProcessoPage() {

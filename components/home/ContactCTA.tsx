@@ -47,8 +47,8 @@ export default function ContactCTA() {
           </h2>
 
           <p className="text-silver text-base md:text-lg font-light max-w-xl mx-auto mb-8 md:mb-12 leading-relaxed">
-            Agende uma visita técnica gratuita e receba um orçamento
-            detalhado sem compromisso em até 48 horas.
+            Atendemos Rio de Janeiro e Niterói. Agende uma visita técnica
+            gratuita e receba um orçamento detalhado sem compromisso em até 48 horas.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 md:mb-12 w-full sm:w-auto"

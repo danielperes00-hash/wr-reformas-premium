@@ -21,14 +21,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "4WM Reformas | Reformas Residenciais e Corporativas Premium",
+  title: "4WM Reformas | Reformas de Alto Padrão no Rio de Janeiro e Niterói",
   description:
-    "Transformamos espaços com excelência e sofisticação. Especialistas em reformas residenciais e corporativas em São Paulo. Solicite seu orçamento.",
+    "Especialistas em reformas residenciais e corporativas de alto padrão no Rio de Janeiro e Niterói. Mais de 15 anos transformando espaços com excelência e sofisticação. Solicite seu orçamento gratuito.",
   keywords:
-    "reforma residencial, reforma corporativa, reforma banheiro, reforma cozinha, pintura, drywall, piso, revestimento, impermeabilização, alvenaria, elétrica, hidráulica",
+    "reformas Rio de Janeiro, reformas Niterói, reforma residencial RJ, reforma corporativa Rio de Janeiro, reforma alto padrão Niterói, reformas Ipanema, reformas Leblon, reformas Barra da Tijuca, reforma banheiro RJ, reforma cozinha Rio de Janeiro, pintura, drywall, piso, impermeabilização RJ",
   openGraph: {
-    title: "4WM Reformas",
-    description: "Transformamos espaços com excelência e sofisticação.",
+    title: "4WM Reformas | Rio de Janeiro e Niterói",
+    description:
+      "Reformas residenciais e corporativas de alto padrão no Rio de Janeiro e Niterói. Excelência, prazo e sofisticação.",
     type: "website",
     locale: "pt_BR",
   },
@@ -45,6 +46,46 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable}`}
     >
       <body className="bg-obsidian text-cream antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HomeAndConstructionBusiness",
+              name: "4WM Reformas",
+              description:
+                "Empresa especializada em reformas residenciais e corporativas de alto padrão no Rio de Janeiro e Niterói.",
+              url: "https://4wmreformas.com.br",
+              telephone: "+55-21-98216-2480",
+              email: "contato@4wmreformas.com.br",
+              areaServed: [
+                { "@type": "City", name: "Rio de Janeiro" },
+                { "@type": "City", name: "Niterói" },
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Rio de Janeiro",
+                addressRegion: "RJ",
+                addressCountry: "BR",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "08:00",
+                  closes: "18:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "08:00",
+                  closes: "13:00",
+                },
+              ],
+              sameAs: [],
+            }),
+          }}
+        />
         <Navigation />
         <main>{children}</main>
         <Footer />

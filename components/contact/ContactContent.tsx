@@ -90,7 +90,7 @@ export default function ContactContent() {
                 icon={<LocationIcon />}
                 title="Atendimento"
                 label="Área de cobertura"
-                value="São Paulo e Grande SP"
+                value="Rio de Janeiro e Niterói"
                 href="#"
               />
             </div>

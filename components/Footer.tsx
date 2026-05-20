@@ -34,8 +34,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-silver text-sm leading-relaxed mb-6 font-light">
-              Há mais de 15 anos transformando espaços com excelência, precisão e sofisticação.
-              Sua reforma merece o melhor.
+              Há mais de 15 anos transformando espaços no Rio de Janeiro e Niterói
+              com excelência, precisão e sofisticação.
             </p>
             <div className="flex gap-4">
               <SocialLink href="#" label="Instagram">
@@ -117,7 +117,7 @@ export default function Footer() {
               </ContactItem>
               <ContactItem label="Endereço">
                 <span className="text-silver text-sm font-light">
-                  São Paulo, SP — Brasil
+                  Rio de Janeiro e Niterói — RJ
                 </span>
               </ContactItem>
               <ContactItem label="Horário">

@@ -61,19 +61,18 @@ export default function AboutContent() {
               </h2>
               <div className="space-y-5 text-silver font-light leading-relaxed">
                 <p>
-                  Fundada em 2009 por Wagner Rodrigues, a 4WM Reformas nasceu de
-                  uma convicção simples: o mercado precisava de uma empresa que unisse
-                  técnica impecável com atendimento de luxo.
+                  Fundada em 2009 por Wagner Rodrigues, a 4WM Reformas nasceu no Rio de
+                  Janeiro de uma convicção simples: o mercado precisava de uma empresa que
+                  unisse técnica impecável com atendimento de luxo.
                 </p>
                 <p>
-                  Ao longo de mais de 15 anos, construímos uma reputação sólida baseada
-                  em resultados concretos: mais de 800 obras entregues, 98% de satisfação
-                  dos clientes e um portfólio que inclui residências de alto padrão,
-                  escritórios corporativos e clínicas de saúde.
+                  Ao longo de mais de 15 anos, construímos uma reputação sólida no Rio de
+                  Janeiro e Niterói: mais de 800 obras entregues em bairros como Ipanema,
+                  Leblon, Barra da Tijuca e Icaraí, com 98% de satisfação dos clientes.
                 </p>
                 <p>
                   Nossa missão é transformar espaços comuns em ambientes extraordinários,
-                  sempre respeitando o sonho e o investimento de cada cliente.
+                  sempre respeitando o sonho e o investimento de cada cliente carioca e niteroiense.
                 </p>
               </div>
             </motion.div>

@@ -6,14 +6,14 @@ import { useState } from "react";
 const testimonials = [
   {
     name: "Fernanda Oliveira",
-    role: "Proprietária — Cobertura Higienópolis",
+    role: "Proprietária — Cobertura Ipanema, Rio de Janeiro",
     text: "A 4WM Reformas superou todas as expectativas. O projeto foi executado com um nível de cuidado e precisão que eu nunca tinha visto. Entregaram antes do prazo e dentro do orçamento. Recomendo com toda convicção.",
     rating: 5,
   },
   {
     name: "Ricardo Mendes",
     role: "CEO — Grupo Mendes Incorporações",
-    text: "Contratamos a 4WM Reformas para a reforma de nosso escritório na Faria Lima. Trabalho impecável, equipe altamente profissional e comunicação excelente durante todo o processo. O resultado ficou digno de revista de arquitetura.",
+    text: "Contratamos a 4WM Reformas para a reforma de nosso escritório no Centro do Rio. Trabalho impecável, equipe altamente profissional e comunicação excelente durante todo o processo. O resultado ficou digno de revista de arquitetura.",
     rating: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     name: "Ana Lima",
-    role: "Proprietária — Casa Morumbi",
+    role: "Proprietária — Casa Barra da Tijuca, Rio de Janeiro",
     text: "Reforma de 450m² da nossa casa, um projeto desafiador. A 4WM Reformas gerenciou tudo com maestria: 8 tipos de serviços simultaneamente, materiais importados, prazo respeitado. Simplesmente excelente.",
     rating: 5,
   },

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Apartamento Jardins",
+    title: "Apartamento Ipanema",
     area: "180m²",
     duration: "45 dias",
     beforeBg: "linear-gradient(135deg, #1a1410 0%, #2d2318 40%, #1a1410 100%)",
@@ -14,7 +14,7 @@ const projects = [
     afterLabel: "Acabamento premium entregue",
   },
   {
-    title: "Escritório Paulista",
+    title: "Escritório Centro RJ",
     area: "320m²",
     duration: "60 dias",
     beforeBg: "linear-gradient(135deg, #151210 0%, #241e18 40%, #151210 100%)",
@@ -23,7 +23,7 @@ const projects = [
     afterLabel: "Ambiente corporativo moderno",
   },
   {
-    title: "Casa Morumbi",
+    title: "Casa Barra da Tijuca",
     area: "450m²",
     duration: "90 dias",
     beforeBg: "linear-gradient(135deg, #18140e 0%, #2a2010 40%, #18140e 100%)",
