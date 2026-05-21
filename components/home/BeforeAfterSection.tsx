@@ -2,14 +2,17 @@
 
 import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Apartamento Ipanema",
     area: "180m²",
     duration: "45 dias",
-    beforeBg: "linear-gradient(135deg, #1a1410 0%, #2d2318 40%, #1a1410 100%)",
-    afterBg: "linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #0a0a0a 100%)",
+    beforeSrc: "/images/ipanema-before.png",
+    afterSrc: "/images/ipanema-after.png",
+    beforeBg: undefined,
+    afterBg: undefined,
     beforeLabel: "Estado original degradado",
     afterLabel: "Acabamento premium entregue",
   },
@@ -17,6 +20,8 @@ const projects = [
     title: "Escritório Centro RJ",
     area: "320m²",
     duration: "60 dias",
+    beforeSrc: undefined,
+    afterSrc: undefined,
     beforeBg: "linear-gradient(135deg, #151210 0%, #241e18 40%, #151210 100%)",
     afterBg: "linear-gradient(135deg, #080808 0%, #141414 40%, #0a0a0a 100%)",
     beforeLabel: "Espaço desorganizado",
@@ -26,6 +31,8 @@ const projects = [
     title: "Casa Barra da Tijuca",
     area: "450m²",
     duration: "90 dias",
+    beforeSrc: undefined,
+    afterSrc: undefined,
     beforeBg: "linear-gradient(135deg, #18140e 0%, #2a2010 40%, #18140e 100%)",
     afterBg: "linear-gradient(135deg, #0a0a0a 0%, #161616 40%, #0a0a0a 100%)",
     beforeLabel: "Construção dos anos 80",
@@ -34,13 +41,17 @@ const projects = [
 ];
 
 function BeforeAfterSlider({
+  beforeSrc,
+  afterSrc,
   beforeBg,
   afterBg,
   beforeLabel,
   afterLabel,
 }: {
-  beforeBg: string;
-  afterBg: string;
+  beforeSrc?: string;
+  afterSrc?: string;
+  beforeBg?: string;
+  afterBg?: string;
   beforeLabel: string;
   afterLabel: string;
 }) {
@@ -55,74 +66,110 @@ function BeforeAfterSlider({
     setPosition((x / rect.width) * 100);
   }, []);
 
+  const hasImages = !!beforeSrc && !!afterSrc;
+
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-72 md:h-96 overflow-hidden cursor-col-resize select-none"
+      className="relative w-full h-72 md:h-[480px] overflow-hidden cursor-col-resize select-none"
       onMouseDown={(e) => { dragging.current = true; updatePosition(e.clientX); }}
       onMouseMove={(e) => { if (dragging.current) updatePosition(e.clientX); }}
       onMouseUp={() => { dragging.current = false; }}
       onMouseLeave={() => { dragging.current = false; }}
-      onTouchMove={(e) => updatePosition(e.touches[0].clientX)}
+      onTouchStart={(e) => { dragging.current = true; updatePosition(e.touches[0].clientX); }}
+      onTouchMove={(e) => { e.preventDefault(); updatePosition(e.touches[0].clientX); }}
+      onTouchEnd={() => { dragging.current = false; }}
     >
-      {/* After (full) */}
+      {/* After (full width base layer) */}
       <div
-        className="absolute inset-0 flex items-center justify-center"
-        style={{ background: afterBg }}
+        className="absolute inset-0"
+        style={afterBg ? { background: afterBg } : undefined}
       >
-        <div className="text-center">
-          <div className="text-gold/30 font-display text-6xl font-light mb-2">Depois</div>
-          <div
-            className="w-16 h-16 mx-auto rounded-full border border-gold/20 flex items-center justify-center"
-            style={{ background: "rgba(201,169,110,0.05)" }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,169,110,0.5)" strokeWidth="1">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9,22 9,12 15,12 15,22" />
-            </svg>
+        {afterSrc && (
+          <Image
+            src={afterSrc}
+            alt="Depois da reforma"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 80vw"
+            priority
+            draggable={false}
+          />
+        )}
+        {!hasImages && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-gold/30 font-display text-6xl font-light mb-2">Depois</div>
+              <div
+                className="w-16 h-16 mx-auto rounded-full border border-gold/20 flex items-center justify-center"
+                style={{ background: "rgba(201,169,110,0.05)" }}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,169,110,0.5)" strokeWidth="1">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9,22 9,12 15,12 15,22" />
+                </svg>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="absolute bottom-4 right-4 text-xs tracking-[0.2em] text-gold/60 uppercase">
-          {afterLabel}
+        )}
+        {/* After label */}
+        <div className="absolute bottom-4 right-4 z-10 px-3 py-1.5 bg-obsidian/60 backdrop-blur-sm border border-gold/20 rounded">
+          <span className="text-[10px] tracking-[0.2em] text-gold/80 uppercase">{afterLabel}</span>
         </div>
       </div>
 
-      {/* Before (clipped) */}
+      {/* Before (clipped to left of divider) */}
       <div
-        className="absolute inset-0 flex items-center justify-center overflow-hidden"
+        className="absolute inset-0 overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
         <div
-          className="absolute inset-0 flex items-center justify-center"
-          style={{ background: beforeBg }}
+          className="absolute inset-0"
+          style={beforeBg ? { background: beforeBg } : undefined}
         >
-          <div className="text-center">
-            <div className="text-gold/20 font-display text-6xl font-light mb-2">Antes</div>
-            <div
-              className="w-16 h-16 mx-auto rounded-full border border-gold/10 flex items-center justify-center"
-              style={{ background: "rgba(201,169,110,0.03)" }}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,169,110,0.3)" strokeWidth="1">
-                <rect x="3" y="3" width="18" height="18" rx="1" />
-                <line x1="9" y1="3" x2="9" y2="21" />
-                <line x1="15" y1="3" x2="15" y2="21" />
-                <line x1="3" y1="9" x2="21" y2="9" />
-                <line x1="3" y1="15" x2="21" y2="15" />
-              </svg>
+          {beforeSrc && (
+            <Image
+              src={beforeSrc}
+              alt="Antes da reforma"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 80vw"
+              priority
+              draggable={false}
+            />
+          )}
+          {!hasImages && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-gold/20 font-display text-6xl font-light mb-2">Antes</div>
+                <div
+                  className="w-16 h-16 mx-auto rounded-full border border-gold/10 flex items-center justify-center"
+                  style={{ background: "rgba(201,169,110,0.03)" }}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,169,110,0.3)" strokeWidth="1">
+                    <rect x="3" y="3" width="18" height="18" rx="1" />
+                    <line x1="9" y1="3" x2="9" y2="21" />
+                    <line x1="15" y1="3" x2="15" y2="21" />
+                    <line x1="3" y1="9" x2="21" y2="9" />
+                    <line x1="3" y1="15" x2="21" y2="15" />
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="absolute bottom-4 left-4 text-xs tracking-[0.2em] text-gold/40 uppercase">
-            {beforeLabel}
-          </div>
+          )}
+        </div>
+        {/* Before label */}
+        <div className="absolute bottom-4 left-4 z-10 px-3 py-1.5 bg-obsidian/60 backdrop-blur-sm border border-gold/10 rounded">
+          <span className="text-[10px] tracking-[0.2em] text-gold/60 uppercase">{beforeLabel}</span>
         </div>
       </div>
 
-      {/* Divider */}
+      {/* Divider line + handle */}
       <div
-        className="absolute top-0 bottom-0 w-px bg-gold/80 z-10 pointer-events-none"
+        className="absolute top-0 bottom-0 w-px bg-gold/80 z-20 pointer-events-none"
         style={{ left: `${position}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gold flex items-center justify-center shadow-lg shadow-gold/20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-gold flex items-center justify-center shadow-xl shadow-black/40 ring-4 ring-gold/20">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#080808" strokeWidth="2.5">
             <path d="M5 12h14M9 8l-4 4 4 4M15 8l4 4-4 4" />
           </svg>
@@ -184,6 +231,8 @@ export default function BeforeAfterSection() {
           className="rounded-xl overflow-hidden border border-gold/10"
         >
           <BeforeAfterSlider
+            beforeSrc={projects[active].beforeSrc}
+            afterSrc={projects[active].afterSrc}
             beforeBg={projects[active].beforeBg}
             afterBg={projects[active].afterBg}
             beforeLabel={projects[active].beforeLabel}
