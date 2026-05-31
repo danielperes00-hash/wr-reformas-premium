@@ -28,10 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <div className="font-display text-3xl font-semibold tracking-widest text-cream">4WM</div>
-              <div className="text-[9px] tracking-[0.35em] text-gold uppercase font-light">
-                Reformas
-              </div>
+              <img src="/images/logo.png" alt="4WM Reformas" className="h-16 w-16 rounded-full object-cover" />
             </div>
             <p className="text-silver text-sm leading-relaxed mb-6 font-light">
               Há mais de 15 anos transformando espaços no Rio de Janeiro e Niterói
