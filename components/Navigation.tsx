@@ -48,13 +48,8 @@ export default function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none group">
-            <span className="font-display text-2xl font-semibold tracking-widest text-cream group-hover:text-gold transition-colors duration-300">
-              4WM
-            </span>
-            <span className="text-[9px] tracking-[0.35em] text-gold uppercase font-light">
-              Reformas
-            </span>
+          <Link href="/" className="flex items-center group">
+            <img src="/images/logo.png" alt="4WM Reformas" className="h-12 w-12 rounded-full object-cover" />
           </Link>
 
           {/* Desktop nav */}
